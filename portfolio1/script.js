@@ -368,7 +368,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 football: "Bóng đá",
                 skillsSubtitle: "Trong quá trình theo đuổi phát triển mobile, tôi đã bổ sung các kỹ năng khác để phát triển định hướng tương lai của mình.",
                 projectsTitle: "DỰ ÁN",
-                coffeeDesc: "Ứng dụng di động cho thương mại điện tử cà phê với chat thời gian thực và bảng điều khiển quản trị.",
+                orbitDesc: "Hệ sinh thái quản lý cuộc sống cá nhân với AI, IoT và gamification. Quản lý sức khỏe, công việc, tài chính và tinh thần trên một nền tảng.",
+                coffeeDesc: "Ứng dụng thương mại điện tử cà phê với chat thời gian thực, hệ thống đặt hàng và bảng quản trị quản lý kho và theo dõi doanh số.",
                 clinicDesc: "Hệ thống backend cho quản lý lịch hẹn phòng khám sử dụng Spring Boot, MySQL, JWT và RESTful APIs.",
                 pharmacyDesc: "Đang phát triển hệ thống trực tuyến cho Nhà thuốc WG2 để quản lý bán hàng và đơn thuốc hiệu quả.",
                 role: "Vai trò:",
@@ -385,7 +386,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 message: "Tin nhắn",
                 send: "Gửi",
                 enrolled: "Udemy • Đã đăng ký",
-                viewCourse: "Xem khóa học"
+                viewCourse: "Xem khóa học",
+                // Experience Section
+                expSubtitle: "Trách nhiệm và Thành tựu chính:",
+                expItem1: "Học framework Odoo ERP (Python + PostgreSQL)",
+                expItem2: "Nắm vững các module: Sales, Purchase, Inventory, CRM, Accounting, Website/eCommerce, Manufacturing (MRP) – BOM & quy trình sản xuất",
+                expItem3: "Làm việc với cấu trúc module Odoo: models, views (XML), actions, menus",
+                expItem4: "Xây dựng các module tùy chỉnh đơn giản (sản phẩm, khách hàng, đơn hàng)",
+                expItem5: "Học ORM, API, phân quyền truy cập và nhóm bảo mật",
+                expItem6: "Hiểu quy trình triển khai ERP cho doanh nghiệp",
+                downloadText: "Tải CV"
             },
             en: {
                 flag: '🇬🇧',
@@ -410,7 +420,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 football: "Football",
                 skillsSubtitle: "During my pursuit of mobile development, I have supplemented with other skills to develop my future direction.",
                 projectsTitle: "PROJECTS",
-                coffeeDesc: "A mobile app for coffee e-commerce with real-time chat and admin dashboard.",
+                orbitDesc: "Personal life management ecosystem with AI, IoT, and gamification. Manage health, work, finances, and mental wellness in one platform.",
+                coffeeDesc: "Mobile coffee e-commerce app featuring real-time chat, seamless ordering system, and admin dashboard for managing inventory and tracking sales.",
                 clinicDesc: "Backend system for clinic appointment management using Spring Boot, MySQL, JWT, and RESTful APIs.",
                 pharmacyDesc: "Developing an online system for WG2 Pharmacy to manage product sales and prescriptions efficiently.",
                 role: "Role:",
@@ -427,7 +438,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 message: "Message",
                 send: "Send",
                 enrolled: "Udemy • Enrolled",
-                viewCourse: "View Course"
+                viewCourse: "View Course",
+                // Experience Section
+                expSubtitle: "Key Responsibilities & Achievements:",
+                expItem1: "Learned the Odoo ERP framework (Python + PostgreSQL)",
+                expItem2: "Understood key modules: Sales, Purchase, Inventory, CRM, Accounting, Website/eCommerce, Manufacturing (MRP) \u2013 BOM & production flow",
+                expItem3: "Worked with Odoo module structure: models, views (XML), actions, menus",
+                expItem4: "Built simple custom modules (products, customers, orders)",
+                expItem5: "Learned ORM, API, access rights, and security groups",
+                expItem6: "Understood ERP implementation workflow for businesses",
+                downloadText: "Download CV"
             }
         };
 
@@ -473,9 +493,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // Update project descriptions
             const projectDescs = document.querySelectorAll('.project-desc');
-            if (projectDescs[0]) projectDescs[0].textContent = t.coffeeDesc;
-            if (projectDescs[1]) projectDescs[1].textContent = t.clinicDesc;
-            if (projectDescs[2]) projectDescs[2].textContent = t.pharmacyDesc;
+            if (projectDescs[0]) projectDescs[0].textContent = t.orbitDesc;
+            if (projectDescs[1]) projectDescs[1].textContent = t.coffeeDesc;
+            if (projectDescs[2]) projectDescs[2].textContent = t.clinicDesc;
+            if (projectDescs[3]) projectDescs[3].textContent = t.pharmacyDesc;
 
             const roleMetas = document.querySelectorAll('.project-meta');
             roleMetas.forEach(meta => {
@@ -489,6 +510,31 @@ document.addEventListener("DOMContentLoaded", function() {
             document.querySelectorAll('.link-btn').forEach(btn => {
                 btn.textContent = t.viewGithub;
             });
+
+            // Update Experience section
+            const expSubtitle = document.querySelector('.exp-subtitle');
+            if (expSubtitle) expSubtitle.textContent = t.expSubtitle;
+            
+            const expItem1 = document.querySelector('.exp-item-1');
+            if (expItem1) expItem1.textContent = t.expItem1;
+            
+            const expItem2 = document.querySelector('.exp-item-2');
+            if (expItem2) expItem2.textContent = t.expItem2;
+            
+            const expItem3 = document.querySelector('.exp-item-3');
+            if (expItem3) expItem3.textContent = t.expItem3;
+            
+            const expItem4 = document.querySelector('.exp-item-4');
+            if (expItem4) expItem4.textContent = t.expItem4;
+            
+            const expItem5 = document.querySelector('.exp-item-5');
+            if (expItem5) expItem5.textContent = t.expItem5;
+            
+            const expItem6 = document.querySelector('.exp-item-6');
+            if (expItem6) expItem6.textContent = t.expItem6;
+            
+            const downloadText = document.querySelector('.download-text');
+            if (downloadText) downloadText.textContent = t.downloadText;
 
             // Update contact section
             const contactDesc = document.querySelector('.contact-info p');
